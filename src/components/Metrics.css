@@ -1,0 +1,89 @@
+.metrics-section {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: calc(570 * var(--u)) minmax(0, 1fr);
+  align-items: start;
+  gap: calc(20 * var(--u));
+  height: calc(1175 * var(--u));
+  padding: calc(95 * var(--u)) calc(60 * var(--u));
+  border-radius: calc(16 * var(--u));
+  background: #fff;
+  color: #011020;
+}
+
+.metrics-heading {
+  margin: 0;
+  font-size: calc(18 * var(--u));
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: calc(0.18 * var(--u));
+}
+
+.metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(100 * var(--u));
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.metrics-item {
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 * var(--u));
+  min-width: 0;
+}
+
+.metrics-row {
+  display: flex;
+  align-items: flex-end;
+  gap: calc(20 * var(--u));
+  height: calc(105 * var(--u));
+}
+
+.metrics-value,
+.metrics-label {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.metrics-value {
+  color: #0d74d8;
+  font-size: calc(150 * var(--u));
+  font-weight: 400;
+  line-height: 1;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.metrics-label {
+  font-size: calc(24 * var(--u));
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: calc(0.24 * var(--u));
+  text-align: right;
+}
+
+.metrics-line {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.metrics-line img {
+  position: absolute;
+  top: calc(-1 * var(--u));
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@supports not (text-box-trim: trim-both) {
+  .metrics-value {
+    line-height: 0.7;
+  }
+}
